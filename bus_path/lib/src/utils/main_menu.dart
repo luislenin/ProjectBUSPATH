@@ -1,7 +1,7 @@
 import 'package:bus_path/src/widgets/sectores_widget.dart';
 import 'package:bus_path/src/widgets/init_widget.dart';
 import 'package:bus_path/src/widgets/parada_widget.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class ItemMenu{

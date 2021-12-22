@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\APLICACIONES MOVILES\\BusPath\\bus_path\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\APLICACIONES MOVILES\\BusPath\\ProjectBUSPATH\\bus_path\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\APLICACIONES MOVILES\\BusPath\\bus_path\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\APLICACIONES MOVILES\\BusPath\\ProjectBUSPATH\\bus_path\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

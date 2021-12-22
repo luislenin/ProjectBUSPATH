@@ -8,14 +8,15 @@ class CARDCOUNTRY extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-                 elevation: 12.0,
-                      child: ListTile(
-            
-                          leading: const Icon(Icons.map_outlined),
-                          title: Text(model.country?.name ?? "" , style: Theme.of(context).textTheme.headline4),
-                          subtitle: Text(model.country?.alpha2Code ?? "", style: Theme.of(context).textTheme.subtitle2),
-                            trailing: const Icon(Icons.maps_home_work),
-                                  ),
-                    );
+      elevation: 12.0,
+      child: ListTile(
+        leading: const Icon(Icons.map_outlined),
+        title: Text(model.country?.name ?? "",
+            style: Theme.of(context).textTheme.headline4),
+        subtitle: Text(model.country?.alpha2Code ?? "",
+            style: Theme.of(context).textTheme.subtitle2),
+        trailing: const Icon(Icons.maps_home_work),
+      ),
+    );
   }
 }

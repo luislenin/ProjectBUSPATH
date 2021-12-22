@@ -41,7 +41,10 @@ class _ParadaWidgetState extends State<ParadaWidget> {
   _downloadParada() async {
 
     _listparadas = await _paradasservice.getParadas();
-    setState(() {});
+    if(mounted){
+       setState(() {});
+    }
+   
 
 
   }

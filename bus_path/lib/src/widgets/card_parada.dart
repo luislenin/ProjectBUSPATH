@@ -3,19 +3,44 @@ import 'package:flutter/material.dart';
 
 class ParadaCard extends StatelessWidget {
   const ParadaCard({Key? key, required this.model}) : super(key: key);
-    final Paradas model;
+  final Paradas model;
   @override
   Widget build(BuildContext context) {
-  final url = model.fieldsProto?.imagenUrlPdd!.stringValue.toString();
-    return Card(
-                 elevation: 7.0,
-                      child: ListTile(
-                           tileColor: Colors.orange[100], 
-                           leading: CircleAvatar(backgroundImage: NetworkImage(url.toString())),
-                          title: Text(model.fieldsProto!.nombrePdd!.stringValue.toString(), style: Theme.of(context).textTheme.headline4,),
-                          subtitle: Text(model.fieldsProto!.nomAnteriorPdd!.stringValue.toString(), style: Theme.of(context).textTheme.subtitle2),
-                            trailing:  Text(model.fieldsProto!.nomSiguientePdd!.stringValue.toString(), style: Theme.of(context).textTheme.subtitle1),
-                                  ),
-                    );
+    final url = model.fieldsProto?.imagenUrlPdd!.stringValue.toString();
+    return SizedBox(
+        height: 600,
+        child: Card(
+          elevation: 7.0,
+          child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(url.toString()), fit: BoxFit.fitWidth)),
+            child: ListTile(
+              title: Text(
+                "Parada Actual: " +
+                    model.fieldsProto!.nombrePdd!.stringValue.toString(),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText2!
+                    .copyWith(color: Colors.blue),
+              ),
+              subtitle: Text(
+                  "Anterior Parada: " +
+                      model.fieldsProto!.nomAnteriorPdd!.stringValue.toString(),
+                  style: Theme.of(context)
+                      .textTheme
+                      .caption!
+                      .copyWith(color: Colors.red)),
+              trailing: Text(
+                  "Siguiente\nParada: " +
+                      model.fieldsProto!.nomSiguientePdd!.stringValue
+                          .toString(),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText1!
+                      .copyWith(color: Colors.green, fontSize: 12)),
+            ),
+          ),
+        ));
   }
 }

@@ -40,7 +40,10 @@ class _CITIESWIDGETState extends State<CITIESWIDGET> {
   _downloadCountry() async {
 
     _listOfCountry = await _citiesservice.getCities();
-    setState(() {});
+     if(mounted){
+       setState(() {});
+    }
+   
 
 
   }
